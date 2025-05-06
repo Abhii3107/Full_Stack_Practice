@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet"><!--if we want to modify bootsrap styling- Overide-->
+    <title>Bootstrap</title>
+</head>
+<body>
+    <button>click</button> <!--Normal button-->
+    <button class="btn btn-success">click</button> <!--bootsrap css button by including class-->
+    <hr>
+    <div class="container">
+        <h2>Bootstap demo</h2>
+        <!--NOW , in normal ways it occupy full width of page 
+        but , in this case it come under container with good spaces and good font (Bootstap styling)-->
+        <P>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem ipsam eum architecto quaerat veniam totam? Esse totam corporis eveniet similique, dicta placeat itaque dolorem vitae aut suscipit aliquid veniam debitis.
+        Consequuntur repellendus ut voluptatibus vero blanditiis natus nam perspiciatis iusto modi recusandae. Atque aut reiciendis dicta inventore tenetur possimus esse adipisci exercitationem accusantium veniam amet, reprehenderit velit? Nemo, adipisci magni.
+        Aut laboriosam, atque praesentium minima mollitia reiciendis ducimus numquam, ad, quis aspernatur officia molestiae animi. Dolore earum tempore cum vel, dignissimos ullam, minus accusantium cupiditate sapiente nesciunt explicabo nostrum non.
+        Dolores doloribus reiciendis tempore quidem quae! Dolorum ipsam animi non in illum, itaque accusamus enim expedita perferendis explicabo quae libero saepe vero facilis harum consequatur dignissimos atque quo, nihil quis?
+        Magnam similique repudiandae corporis beatae totam expedita dolore explicabo sapiente officia eum quisquam eveniet ab perspiciatis quaerat sed a, aliquam non sequi animi ullam eaque doloribus commodi voluptas reiciendis? Cumque.
+    </P>
+    <hr>
+    <!-- buttons -->      <!--All links are present at bootsrap website , copy that and if you want override that-->
+    <button type="button" class="btn">click me</button>      <!--(only btn class included here)--> 
+    <button type="button" class="btn btn-success"> click me</button> <!--Green color by default-->
+    
+    <button type="button" class="btn btn-outline-success">click me</button> <!--outline buttons (only outline is added in middle) , when we hover then it changes-->
+    <button type="button" class="btn btn-primary btn-lg">Large button</button> <!--Large buttons(btn-lg class is added in last) -->
+    <button type="button" class="btn btn-primary btn-sm">small button</button>
+    <button type="button" class="btn btn-primary" disabled>notworkable</button>
+    
+    <!--Put any link in button form-->
+    <a  href="#" class="btn btn-dark" >Anchor tag</a>
+    <hr>
+
+    <!--Badges(like whatsapp icon notification no)-->
+    <span class="badge bg-danger">10+</span>
+    <br>
+    <h3>Notification <span class="badge text-bg-secondary">20</span></h3><!--Heading badges-->
+    <br>
+    <!--by manually , just write button and its name and include in it span -->
+    <button class="btn btn-dark">Followers <span class="badge bg-danger">20+</span></button>
+    <br>
+    <button type="button" class="btn btn-primary">
+        whatsapp <span class="badge text-bg-secondary">10</span> <!--IN buttons form-->
+    </button>
+    <br>
+    <!--Poistioned badges-->
+    <button type="button" class="btn btn-primary position-relative">
+        Insta
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+          99+
+          <span class="visually-hidden">unread messages</span>
+        </span>        
+      </button>
+      
+      <hr>
+      <!--Alert-->
+      <div class="alert alert-danger" >Download failed !</div>
+      <div class="alert alert-success" >congrats</div>
+
+      <!--Alert with dismiss button-->  <!--here, button is included and .close for -crossbutton and alert-dismissible for padding of cross to most right and js is included -dismiss -->
+      <div class="alert alert-danger alert-dismissible" >Download failed ! <button class="btn-close" data-bs-dismiss="alert" ></button> 
+    </div>
+<hr>
+<!--button group-->
+<div class="btn-group">
+    <button class="btn btn-primary">one</button>
+    <button class="btn btn-primary">two </button>
+    <button class="btn btn-outline-primary">three</button>
+</div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+/* .chat{
+    background-color: bisque;
+    
+}
+.msg{
+    background-color: rgb(131, 146, 40);
+    color: white;
+} */
+
+/* Reset and base styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+/* Header */
+h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #075e54;
+}
+
+/* New Chat button */
+form[action="/chats/new"] button {
+    background-color: #25d366;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto 20px auto;
+    font-weight: bold;
+}
+
+form[action="/chats/new"] button:hover {
+    background-color: #1db954;
+}
+
+/* Chat container */
+.chat {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Message box inside each chat */
+.msg {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #e7f5ff;
+    border-left: 4px solid #34b7f1;
+    border-radius: 6px;
+}
+
+/* Edit button */
+form[action*="/edit"] button {
+    background-color: #34b7f1;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+form[action*="/edit"] button:hover {
+    background-color: #1991db;
+}
+
+/* Time and date */
+.chat p:last-child {
+    font-size: 12px;
+    color: #888;
+}
