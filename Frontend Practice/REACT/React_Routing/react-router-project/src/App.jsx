@@ -41,7 +41,7 @@ const router= createBrowserRouter(
         <Navbar/>
         <Dashboard/>
        </div>,
-       children:[
+       children:[                   // nested Routing
         {
           path:"courses",
           element:<Courses/>

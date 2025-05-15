@@ -5,7 +5,7 @@ const Params = () => {
     const{id}=useParams();
   return (
     <div>
-      Params:{id}
+      Params: {id}
     </div>
   )
 }
