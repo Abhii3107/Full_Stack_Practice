@@ -30,7 +30,7 @@ Portfolio Website: Built my personal portfolio website using pure HTML.
 # React.js
 Core Concepts:
 
-Learned components, state, events, and hooks , Routing in React.
+Learned components, state, events, and hooks , Routing and Redux-Toolkit in React.
 
 Built simple applications like Lottery Ticket and Todo List to practice React fundamentals.
 
