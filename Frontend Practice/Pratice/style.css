@@ -1,0 +1,49 @@
+div{
+    color:black;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium';
+
+}
+*{
+    color:black;
+    background-color:antiquewhite;
+}
+
+button:hover{
+      background-color: green;
+      color:white;
+}
+
+button:active{
+    background-color: black;
+}
+
+#ipl:hover{
+    text-decoration: underline;
+}
+
+h1{
+      text-align: center;
+}
+h1::selection{
+   color:red !important;    /*  this will be fix */
+}
+/* ---------------------------------------------------------------------- */
+
+#container{
+    height: 300px;
+    width: 80%;
+    background-color: white;
+    margin: 10px auto;
+    border: 2px solid black;
+                              display:flex; /*limit,restrict kr deta hai saare ke saare element ko unhe apne parent container ke andr hi rehna prega */
+                              flex-direction: row;    /*  by default its row (main axis- x ki trf) */ 
+ 
+                              justify-content: space-between
+                            }
+#container div{
+    height: 100px;
+    width:px;
+    font-size: 1.5em;
+    text-align: center;
+}
