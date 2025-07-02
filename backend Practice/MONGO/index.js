@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose'); // moongoose- A library that creates a connection between MongoDb and Node.js Javascript
 
 //mongoose.connect('mongodb://127.0.0.1:27017/test'); -> connect method connect mongoose to that url (which is database link (ex- test database)) ,  mongodb -  protocol, 127.0.0.1- similar localhost .2707 -port no, /test -database link
 
@@ -14,12 +14,13 @@ async function main() {
   // use `await mongoose.connect('mongodb://user:password@127.0.0.1:27017/test');` if your database has auth enabled
 }
 
-const userSchema = new mongoose.Schema({    // define Schema
+const userSchema = new mongoose.Schema({    // define Schema -shape of document within collection
     name: String,
     email : String,
     age: Number
 }); 
 
+//Model_name          //collection name
 const User = mongoose.model("User", userSchema); // model in mongoose is a class with which we construct documents
 
 // const user1= new User({
@@ -116,7 +117,7 @@ const User = mongoose.model("User", userSchema); // model in mongoose is a class
 // }
  //In termnial result comes like this , to eliminate that and get data directly 
 
-// Model.findOneAndUpdate(Filter,updation,options); -> (options.new=false) , if we true this vale , a modified document return (nhi to modified to ho jayega pr cmd mai phela wala data show krega)
+// Model.findOneAndUpdate(Filter,updation,options); -> (options.new=false) , if we true this value , a modified document return (nhi to modified to ho jayega pr cmd mai phela wala data show krega)
 
 // User.findOneAndUpdate({name:"Tony"} ,{name :"Stark"} ,{new :true})
 // .then((data) =>{

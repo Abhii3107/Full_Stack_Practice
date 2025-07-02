@@ -25,7 +25,7 @@ async function main() {
 }
 
 let chat1= new Chat({
-    from: "Sanskriti",
+    from: "Raj",
     to :"Abhay",
     message :"Hii Abhay Whats'up",
     created_at: new Date() // by this random date and time generated
@@ -46,7 +46,7 @@ app.get("/",(req,res) =>{
 
 //Index route - to get all chats
 app.get("/chats", async (req,res) =>{
-    let chats = await Chat.find(); // to get all data we use chat.find() we know, because this is a asynchronous function so we have to await (but await keyword is used in asymc function)
+    let chats = await Chat.find(); // to get all data we use chat.find() we know, because this is a asynchronous function so we have to await (but await keyword is used in async function)
     // console.log(chats);
     res.render("index.ejs",{chats});
 });
