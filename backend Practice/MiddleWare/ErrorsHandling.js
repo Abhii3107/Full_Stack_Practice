@@ -20,7 +20,7 @@
 //     abcd=abcd; // error code
 // });
 
-// //op- status:500 Internal Server Error 
+// //op- status:500 Internal Server Error
 // // Reference Error :abcd is not defined
 
 // app.listen(3000,() =>{
@@ -30,29 +30,53 @@
 //--------------------------------------------
 // Developer throw an error like this, by customization
 
- const express = require("express");
+//  const express = require("express");
+// const app = express();
+
+// const checkToken = (req, res, next) => {
+//     const { token } = req.query;
+//     if (token === "giveaccess") {
+//         next();
+//     } else {
+//         // You can use res.send OR throw an error
+//         // res.status(403).send("Access Denied");
+//         throw new Error("Access Denied");
+//     }
+// };
+
+// // Apply middleware on route
+// app.get("/api", checkToken, (req, res) => {
+//     res.send("data");
+// });
+// app.listen(3000,() =>{
+//     console.log("app is listening");
+// });
+
+// // Error-handling middleware
+// app.use((err, req, res, next) => {
+//     res.status(403).send(err.message);
+// });
+
+//-----------------------------------------------------
+//custom Error handler
+
+const express = require("express");
 const app = express();
 
-const checkToken = (req, res, next) => {
-    const { token } = req.query;
-    if (token === "giveaccess") {
-        next();
-    } else {
-        // You can use res.send OR throw an error
-        // res.status(403).send("Access Denied");
-        throw new Error("Access Denied");
-    }
-};
-
-// Apply middleware on route
-app.get("/api", checkToken, (req, res) => {
-    res.send("data");
-});
-app.listen(3000,() =>{
-    console.log("app is listening");
+app.get("/err", (req, res) => {
+  abcd = abcd; // error code
 });
 
-// Error-handling middleware
 app.use((err, req, res, next) => {
-    res.status(403).send(err.message);
+  console.log("----Error mIddleware 1---");
+  next(err);
+});
+
+app.use((err, req, res, next) => {
+  console.log("----Error middleware 2-------");
+  next(err);
+});
+
+app.listen(3000, () => {
+  console.log("app is listening");
 });
