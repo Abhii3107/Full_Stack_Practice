@@ -45,3 +45,23 @@ addUsers();
 //but we only define userschema for user so it should be there id only (last one)
 //but mongodb create =s individual id for each addresses , so mongo db assume that nested,sub document is valid document , so thats why by default its add id in these ,
 // to off these - we simply write in schema ->   // _id: false
+
+//----------------------
+/*
+Note:
+In the output, you’ll see that each address in the 'addresses' array gets its own _id field,
+even though we only defined a schema for the user.
+
+This happens because Mongoose treats each item in the nested array as a valid sub-document,
+and by default, Mongoose assigns an _id to every sub-document.
+
+If you don’t want these _id fields for each address, you can set `_id: false` inside the sub-schema like this:
+
+addresses: [
+  {
+    _id: false,
+    location: String,
+    City: String,
+  },
+]
+*/
