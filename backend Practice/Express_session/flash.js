@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const session = require("express-session");
 const path = require("path");
-const flash = require('connect-flash');
+const flash = require('connect-flash');  // npm i connect-flash
 
 
 app.set("view engine", "ejs");

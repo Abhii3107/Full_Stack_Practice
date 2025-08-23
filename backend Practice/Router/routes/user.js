@@ -8,7 +8,7 @@ router.get("/", (req,res) =>{
 
 //show
 router.get("/:id" , (req,res) =>{
-    res.send("Get for user id");
+    res.send("Get for user id") ;
 });
 
 //POST

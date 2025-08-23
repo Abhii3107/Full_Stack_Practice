@@ -26,7 +26,7 @@ app.use("/getsignedCookie" , (req,res) =>{
 //(2)Verify Signed Cookie
  app.get("/verify" , (req,res) =>{
     // console.log(req.cookies);
-    console.log(req.signedCookies);
+    console.log(req.signedCookies); 
     res.send("verified");
  });
 //--------------------------------------------------
