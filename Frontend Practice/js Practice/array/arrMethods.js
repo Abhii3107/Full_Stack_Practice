@@ -44,6 +44,7 @@ let newColours = colours.concat(more); // it does not change in old array(primar
 console.log(newColours); 
 
 console.log(colours);
+//-----------------------------------------------------
 
 /*
 Slice- copies a portion of array
@@ -54,7 +55,9 @@ slice(start , end-1)
 let cars = ["audi" , "Bmw" , "toyata"];
 cars.slice(1,2);//bmw
 
-/*splice - removea/replace/add elements in a place
+//----------------------------------------------------
+
+/*splice - remove/replace/add elements in a place
 it do not make copies , but change in original array
 
 spilce(start index, delete count , adding items0...N);
