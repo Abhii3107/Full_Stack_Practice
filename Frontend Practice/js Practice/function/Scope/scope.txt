@@ -1,0 +1,80 @@
+/*
+Scope (Simple Definition):
+Scope determines the accessibility (visibility) of variables in different parts of your code.
+
+Example with let:
+*/
+function exampleLetScope() {
+    let x = 10;
+    if (true) {
+        let y = 20;
+        console.log(x); // 10
+        console.log(y); // 20
+    }
+    // console.log(y); // Error: y is not defined
+}
+exampleLetScope();
+
+/*
+Types of Scope:
+1. Global Scope:
+   Variables declared outside any function are in the global scope and accessible everywhere.
+*/
+let globalVar = "I am global";
+function showGlobal() {
+    console.log(globalVar); // Accessible
+}
+showGlobal();
+
+/*
+2. Local/Function Scope:
+   Variables declared inside a function are only accessible within that function.
+*/
+function localScopeExample() {
+    let localVar = "I am local";
+    console.log(localVar); // Accessible
+}
+// console.log(localVar); // Error: localVar is not defined
+
+/*
+3. Block Scope:
+   Variables declared with let or const inside a block {} are only accessible within that block.
+*/
+if (true) {
+    let blockVar = "I am block scoped";
+    console.log(blockVar); // Accessible
+}
+// console.log(blockVar); // Error: blockVar is not defined
+
+/*
+Lexical Scope (Definition):
+Lexical scope means that a variable's scope is determined by its physical location in the source code. Inner functions have access to variables defined in their outer (parent) functions.
+
+Example and Derivation:
+*/
+function outer() {
+    let outerVar = "outer";
+    function inner() {
+        console.log(outerVar); // inner has access to outerVar due to lexical scope
+    }
+    inner();
+}
+outer();
+
+/*
+Closure (Definition):
+A closure is a function that remembers and accesses variables from its lexical scope even when that function is executed outside its original scope.
+
+Example and Derivation:
+*/
+function makeCounter() {
+    let count = 0;
+    return function() {
+        count++;
+        return count;
+    };
+}
+const counter = makeCounter();
+console.log(counter()); // 1
+console.log(counter()); // 2
+// The returned function "remembers" the variable "count" from makeCounter(), forming a closure.
